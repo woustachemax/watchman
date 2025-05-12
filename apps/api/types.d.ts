@@ -1,5 +1,5 @@
 declare namespace Express{
     interface Request{
-        userId?: String
+        userId?: string
     }
 }

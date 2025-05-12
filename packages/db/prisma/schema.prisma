@@ -25,7 +25,8 @@ model Website{
   url String
   // user User @relation(fields: [userId], references: [id])
   userId String
-    ticks WebsiteTick[]
+  ticks WebsiteTick[]
+  disabled Boolean @default(false)
 }
 
 model Validator {
