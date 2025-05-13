@@ -1,10 +1,12 @@
 import express from "express"
 import { client } from "db/client";
 import { authMiddleware } from "./middleware";
-
+import cors from "cors"
 
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
+
+app.use(cors())
 app.use(express.json())
 
 app.post("/api/v1/website", authMiddleware, async (req ,res)=>{
@@ -49,12 +51,14 @@ app.get("/api/v1/websites", async (req,res)=>{
         where:{
             userId,
             disabled: false
+        }, include:{
+            ticks: true
         }
     })
 
     res.json({
         data
-    })
+    }, )
     
 })
 
