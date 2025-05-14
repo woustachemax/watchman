@@ -1,34 +1,58 @@
-# Hello World 👋 Welcome to Watchman 💂🏻
+# 🔍 Watchman Uptime Monitor
 
-**What is Watchman?** 
-Watchman is a next-generation uptime monitoring platform that combines traditional website monitoring with the power of Web3 functionality.
+A comprehensive monitoring solution for tracking website uptime, performance, and status with real-time alerts.
 
-### The Problem with Traditional Uptime Monitoring
-Traditional uptime services operate using dedicated machines in fixed locations. For example:
-- Your website is hosted in Boston
-- Local machines ping your site regularly
-- If your site doesn't respond, you receive alerts
+## User Interface ✨
 
-### The Watchman Difference
-By integrating Web3 technology, Watchman creates a decentralized monitoring network where:
+![alt text](<Screenshot from 2025-05-14 19-17-16.png>)
+![alt text](<Screenshot from 2025-05-14 19-17-36.png>)
+![alt text](<Screenshot from 2025-05-14 19-18-30.png>)
+## ✨ Features
 
-1. **Real Users** monitor your website from diverse global locations
-2. **Earn Crypto** as bounty rewards for performing monitoring tasks
-3. **Get Authentic Insights** about your site's performance across different regions and network conditions
+- **Real-time Website Monitoring**: Track your websites' availability with up-to-the-minute status checks
+- **Performance Analytics**: Monitor response times, page load speeds, and other critical metrics
+- **Uptime History**: View historical uptime data with detailed reports and visualizations
+- **Intelligent Alerts**: Receive notifications via email, SMS, or webhooks when your sites experience issues
+- **Customizable Dashboards**: Create personalized views to monitor what matters most to you
+- **Team Collaboration**: Share monitoring responsibilities with team members
 
-## Architecture
+## 🛠️ Tech Stack
 
-![alt text](<Screenshot from 2025-05-11 22-54-54.png>)
+### Frontend
+- **[Next.js](https://nextjs.org/)** - React framework for server-side rendering
+- **[TypeScript](https://www.typescriptlang.org/)** - Strongly typed JavaScript
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[Clerk](https://clerk.dev/)** - Authentication and user management
 
-## How It Was Built
+### Backend
+- **[Express.js](https://expressjs.com/)** - Fast, unopinionated web framework for Node.js
+- **[PostgreSQL](https://www.postgresql.org/)** - Advanced open-source relational database
+- **[Prisma](https://www.prisma.io/)** - Next-generation ORM for Node.js and TypeScript
 
-Watchman uses a simple yet powerful 🦍 text-based set of tools, including:
+### Build Tools
+- **[Bun](https://bun.sh/)** - Fast all-in-one JavaScript runtime & toolkit
+- **[Turborepo](https://turbo.build/)** - High-performance build system for JavaScript/TypeScript monorepos
 
-* **Monorepo Framework**: Turborepo
-* **Frontend Framework:** React
-* **Backend Environment:** Node.js & Express
-* **Database:** PostgreSQL 
-* **ORM (Object-Relational Mapper):** Prisma 
-* **Styling and Icons:** Tailwind CSS 
-* **Authentication:** Clerk 
-* **UI Design:** Figma 
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Bun](https://bun.sh/) runtime (or Node.js v16+)
+- PostgreSQL database
+- [Clerk](https://clerk.dev/) account for authentication
+
+### Environment Setup
+
+Create a `.env` file in the root directory:
+
+```env
+# Database
+DATABASE_URL="postgresql://postgres:password@localhost:5432/watchman"
+
+# Clerk Auth
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
+CLERK_SECRET_KEY=your_secret_key
+
+# Backend
+PORT=8080
+```
